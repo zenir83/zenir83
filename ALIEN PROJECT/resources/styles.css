@@ -1,0 +1,99 @@
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url(fonts/Proxima-Nova/proximanova_regular.ttf) format('truetype');   
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(fonts/Proxima-Nova/proximanova_bold.otf) format('opentype');
+    font-style: bold;
+    font-weight: 700;
+}   
+
+body{
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.buff{
+    background-color: #D0975C;
+}
+  .baby_powder{
+    background-color: #FAF9F3;
+}
+  .black{
+    background-color: #030201;
+}
+  
+  .black{
+    color:#FFFFFF;
+    background-color: #030201;
+}
+  .brown_sugar {   
+    color: #000000;
+    background-color: #A26544;
+}
+  .copper {   
+    color:#000000;
+    background-color: #BD6D38;
+}
+  
+  
+.color-panel {
+      display: inline-block;
+      width: 32%;
+      text-align: center;
+      margin: 20px auto;
+      min-height: 100px;
+}
+
+h1{
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 26px;
+  }
+
+h2 {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Proxima Nova";
+  
+}
+
+  p {
+    font-weight: 400;
+    font-size:14px;
+    font-family: "Proxima Nova", sans-serif;
+  
+  }
+p.font-label.proxima-nova{
+    font-family: "Proxima Nova";
+}
+p.regular.proxima-nova{
+    font-weight:400;
+    font-size:14px;
+    font-family: "Proxima Nova", sans-serif;
+}
+p.italic.proxima-nova{
+    font-weight:400;
+    font-size:14px;
+    font-style: italic;
+    font-family: "Proxima Nova", sans-serif;
+}
+p.bold.proxima-nova{
+    font-weight:700;
+    font-size:14px;
+    font-style: bold;
+    font-family: "Proxima Nova", sans-serif;
+}
+p.regular.proxima-nova-bold{
+    font-weight:700;
+    font-size:27px;
+    font-family: "Proxima Nova Bold", sans-serif;
+}
