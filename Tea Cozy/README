@@ -1,1 +1,10 @@
-This is my take on the Tea Cozy assigment of Codecademy. It is part of the Web Development Fundamentals course. This assignment focuses on CSS flexbox usage in combination with previously gained knowledge on CSS and HTML. See the file 'img-tea-cozy-redline.jpg' for the specs that the student has to use. Pictures are made available by Codecademy
+This is my take on the Tea Cozy assigment of Codecademy. It is part of the Web Development Fundamentals course:
+
+Use your knowledge of relative units and responsive web design to help Tsunami Coffee make their website come to life.
+
+Throughout this project, you’ll edit the existing Tsunami Coffee website code so that the website appears correctly on varying screen sizes. In addition, you’ll contribute styles that will make this website more visually appealing.
+
+
+Techniques used:
+HTML
+CSS: relative units, @media queries.
