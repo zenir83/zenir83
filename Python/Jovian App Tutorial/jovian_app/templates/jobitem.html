@@ -1,0 +1,9 @@
+<div class ="border-bottom" style = "margin-bottom:16px">
+    <h4 margin-bottom:4px>
+        <div class ="row gx-4" > 
+            <h4 > Functie: {{job['title']}} </h4>
+            <p>Locatie: {{job['location']}}</p>
+            {% if 'salaris' in job %}
+            <p>Salaris: {{job['salaris']}}</p>
+            {% endif%}
+          </div>
