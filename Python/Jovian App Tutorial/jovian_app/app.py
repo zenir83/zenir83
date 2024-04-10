@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_wtf import FlaskForm
 
 app = Flask(__name__)
@@ -44,6 +44,10 @@ JOBS = [
 def home(): 
     return render_template('home.html', jobs = JOBS ,
                            company_name = 'Koningsoever')
+
+@app.route("/api/jobs")
+def list_jobs():
+    return jsonify(JOBS)
 
 if __name__== "__main__":
     app.run(host='0.0.0.0', debug=True)

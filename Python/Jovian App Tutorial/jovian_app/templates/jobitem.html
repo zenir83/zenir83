@@ -1,9 +1,16 @@
-<div class ="border-bottom" style = "margin-bottom:16px">
-    <h4 margin-bottom:4px>
-        <div class ="row gx-4" > 
-            <h4 > Functie: {{job['title']}} </h4>
-            <p>Locatie: {{job['location']}}</p>
+<div class ="border-bottom row" style = "margin-bottom:16px; padding-bottom: 8px;">
+    <div class="col-10">
+            <h4 style= "margin-bottom: 4px"> Functie: {{job['title']}} </h4>
+            <div>
+            <b>Locatie: {{job['location']}}</b>
+            </div>
             {% if 'salaris' in job %}
-            <p>Salaris: {{job['salaris']}}</p>
-            {% endif%}
-          </div>
+            <div>
+            <b>Salaris: {{job['salaris']}}</b>
+            </div>
+            {% endif %}
+            <div class="col-2">
+            <button type="button" class="btn btn-success float-left align-middle">Solliciteer</button>
+            </div>
+    </div>
+</div>
