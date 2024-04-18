@@ -7,7 +7,7 @@ and file-loading module "load_dictionary.py"
 
 import load_dictionary
 
-word_list = load_dictionary.load('2of4brif.txt')
+word_list = load_dictionary.load('dictionary.txt')
 
 anagram_list = []
 
