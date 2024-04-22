@@ -21,7 +21,6 @@ def show_job(id):
 
     if not job:
         return "Not Found", 404
-    
     return render_template('jobpage.html', job = job)
 
 # @app.route("/job/<id>/apply", methods=['post'])
