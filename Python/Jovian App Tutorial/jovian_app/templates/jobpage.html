@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{job.title}} - Koningsoever Uitzenbureau</title>
+    {% include 'bootstrap.html'%}
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">
+            Koningsoever Uitzendbureau
+        </h1>
+        <h3 class="mb-2">{{job.vac_title}}</h3>
+        <p class="lead mt-0">{{job.locatie}}</p>
+        <h4>Verantwoordelijkheden / Taken</h4>
+        <p>{{job['taken']}}</p>
+        <h4>Vereiste kennis en opleiding</h4>
+        <p>{{job.vereisten}}</p>
+        <h4>Salary</h4>
+        <p>{{job.valuta}}{{job.salaris}}</p>
+        {% include 'application_form.html' %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

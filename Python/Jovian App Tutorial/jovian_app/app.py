@@ -1,54 +1,38 @@
-from flask import Flask, render_template, request, jsonify
-from flask_wtf import FlaskForm
+from flask import Flask, render_template, jsonify
+from database import load_jobs_from_db, load_job_from_db
 
 app = Flask(__name__)
 
-JOBS = [
-    {'id' : 1,
-     'title' : 'Data Analyst',
-     'location' : ' Zevenhuizen, Zuid - Holland',
-     'salaris' : '5000 euro per maand'
-    },
-    {'id' : 2,
-     'title' : 'Medische analyst',
-     'location' : 'Gouda, Zuid - Holland',
-     'salaris' : '4000 euro per maand'
-    },
-    {'id' : 3,
-     'title' : 'Junior C# developer',
-     'location' : 'Brielle, Zuid - Holland',
-     'salaris' : '3500 euro per maand'
-    },
-    {'id' : 4,
-     'title' : 'Copywriter',
-     'location' : 'Rotterdam, Zuid - Holland',
-     'salaris' : '3000 euro per maand'
-    },   
-    {'id' : 5,
-     'title' : 'Python programmer',
-     'location' : 'Hybride',
-     'salaris' : '4800 euro per maand'
-    },
-    {'id' : 6,
-     'title' : 'Grafisch ontwerper',
-     'location' : 'Hybride',
-    },
-    {'id' : 5,
-     'title' : 'Python programmer',
-     'location' : 'Rotterdam, hybride',
-     'salaris' : '4800 euro per maand'
-    }
-] 
 
 @app.route("/")
 def home(): 
-    return render_template('home.html', jobs = JOBS ,
+    jobs = load_jobs_from_db()
+    return render_template('home.html', jobs=jobs,
                            company_name = 'Koningsoever')
 
 @app.route("/api/jobs")
 def list_jobs():
-    return jsonify(JOBS)
+    jobs = load_jobs_from_db()
+    return jsonify(jobs)
+
+@app.route("/job/<id>")
+def show_job(id):
+    job = load_job_from_db(id)
+
+    if not job:
+        return "Not Found", 404
+    
+    return render_template('jobpage.html', job = job)
+
+# @app.route("/job/<id>/apply", methods=['post'])
+# def apply_to_job(id):
+#   data = request.form
+#   job = load_job_from_db(id)
+#   add_application_to_db(id, data)
+#   return render_template('application_submitted.html', 
+#                          application=data,
+#                          job=job)
 
 if __name__== "__main__":
     app.run(host='0.0.0.0', debug=True)
-
+    
