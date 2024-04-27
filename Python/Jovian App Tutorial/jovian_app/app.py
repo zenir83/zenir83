@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, url_for
 from database import load_jobs_from_db, load_job_from_db, add_application_to_db
 
 app = Flask(__name__)
@@ -9,6 +9,9 @@ def home():
     jobs = load_jobs_from_db()
     return render_template('home.html', jobs=jobs,
                            company_name = 'Koningsoever')
+@app.route("/opleidingen")
+def opleidingen():
+    return render_template('opleidingen.html')
 
 @app.route("/api/jobs")
 def list_jobs():
