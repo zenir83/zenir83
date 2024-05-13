@@ -1,55 +1,78 @@
 <!doctype html>
 <html lang="nl">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> {% block title %} Koningsoever Uitzendbureau{% endblock title %}</title>
-    {%include 'bootstrap.html'%}
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> {% block title %} Koningsoever Uitzendbureau{% endblock title %}</title>
+  {%include 'bootstrap.html'%}
+</head>
+
+<body>
 
   {%include 'nav.html' %}
-  <div class="container-fluid gx-5">
-    <div class="row">
-      <div class = "col">
+  <div class="container">
+    <div class="row align-items-bottom mb-4">
+      <div class='col-md-12 align-items-center'>
+        <h3 class="display-4 mb-4">Welkom bij de volgende stap in jouw carrière!</h3>
       </div>
-      <div class = "col">
-        <div class="clearfix">
-          <img src="/static/unsplash-image-1.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
-          <h3>Witty subheader!</h3>
-          <p>
-            A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
-          </p>
-        
-          <p>
-            As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
-          </p>
-        
-          <p>
-            And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
-          </p>
-        </div>
-      </div>   
-  </div>
+      <div class="row mb-4">
+        <div class="col-md-12" mb-5></div>
+      </div>
+      <div class="col-md-4">
 
-  <div class = "container px-4">
-    <h2 class = "text-center mt-2 mb-4"> Vacature spotlight</h2>
-      <div>
-          {% for job in jobs %}
-          {%  include 'jobitem.html' %}
-          {% endfor %}
+        <img src="/static/unsplash-image-5.jpg" class="img-fluid" alt="...">
+        <p class="text-start">
+          And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or
+          some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img src="/static/unsplash-image-1.jpg" class="img-fluid" alt="...">
+        <p class="text-start">
+          And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or
+          some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img src="/static/unsplash-image-2.jpg" class="img-fluid" alt="...">
+        <p class="text-start">
+          And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or
+          some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+        </p>
+      </div>
     </div>
-  </div> 
-    <div class="container-fluid px-4">
-      <div class="row gx-5">
-        <div class="col">
-          <p>Lorem ipsum dolor sit amet. Qui illo dolores et rerum nobis ut repellat quisquam. Et recusandae expedita ab laborum nobis sed laborum placeat et rerum sunt rem corporis nihil quo harum modi. Et fuga cupiditate in quaerat ipsam et reprehenderit iusto. Eum repellat delectus sed facere dolor non obcaecati voluptas quo itaque voluptatem ut quod quasi ut repudiandae laboriosam aut mollitia internos.
 
-Sit adipisci voluptatem aut harum voluptatem eos ipsum repellendus. Qui facilis modi est illo vero et sint laudantium qui tenetur tempore ut officiis consequatur sit aliquid aperiam. Sit illum blanditiis nam autem expedita non labore voluptatem eum rerum facilis ut blanditiis tempora eum quia quidem.
+    <div class="row align-items-center mb-4">
+      <div class="col-md-12">
+        <h2 class="text-center mt-2 mb-4"> Vacature spotlight</h2>
+        <div>
+          {% for job in jobs %}
+          {% include 'jobitem.html' %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col align-items-start">
+          <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+          </blockquote>
+          <p>Lorem ipsum dolor sit amet. Qui illo dolores et rerum nobis ut repellat quisquam. Et recusandae expedita ab
+            laborum nobis sed laborum placeat et rerum sunt rem corporis nihil quo harum modi. Et fuga cupiditate in
+            quaerat ipsam et reprehenderit iusto. Eum repellat delectus sed facere dolor non obcaecati voluptas quo
+            itaque voluptatem ut quod quasi ut repudiandae laboriosam aut mollitia internos.
 
-Et unde nemo aut rerum alias et officiis consectetur. In ipsum deleniti aut perferendis rerum 33 tempora quibusdam non assumenda nostrum qui quia consectetur. Nam modi amet non accusamus nesciunt eos natus quia eos dolorem quisquam.
+            Sit adipisci voluptatem aut harum voluptatem eos ipsum repellendus. Qui facilis modi est illo vero et sint
+            laudantium qui tenetur tempore ut officiis consequatur sit aliquid aperiam. Sit illum blanditiis nam autem
+            expedita non labore voluptatem eum rerum facilis ut blanditiis tempora eum quia quidem.
+
+            Et unde nemo aut rerum alias et officiis consectetur. In ipsum deleniti aut perferendis rerum 33 tempora
+            quibusdam non assumenda nostrum qui quia consectetur. Nam modi amet non accusamus nesciunt eos natus quia
+            eos dolorem quisquam.
           </p>
         </div>
+      </div>
+      <div class="row mb-4">
         <div class="col">
           <table class="table">
             <thead class="thead-dark">
@@ -82,39 +105,59 @@ Et unde nemo aut rerum alias et officiis consectetur. In ipsum deleniti aut perf
             </tbody>
           </table>
         </div>
-
-      <div class="card-group gx-5">
-        <div class="card">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="row mb-4">
+        <div class="card-group gx-5">
+          <div class="card">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                dy=".3em">Image cap</text>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <div class="card">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                dy=".3em">Image cap</text>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <div class="card">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                dy=".3em">Image cap</text>
+            </svg>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-     <!--Footer and bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Footer and bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
     {%include 'footer.html' %}
 
-  </body>
-</html>
+</body>
 
+</html>

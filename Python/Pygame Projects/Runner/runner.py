@@ -11,7 +11,7 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
-game_active = True
+game_active = False
 start_time = 0 # to enable a fresh restart after game over.
 
 #textures & text
@@ -30,6 +30,8 @@ snail_x_pos = 600
 player_surface = pygame.image.load('graphics/Player/player_walk_1.png').convert_alpha()
 player_rect = player_surface.get_rect(midbottom = (80, 300)) # the 80, 300 defines where the specified part of the rectange is placed. Now the player is nicely on the ground.
 player_gravity = 0
+player_stand = pygame.image.load('graphics/Player/player_stand.png').convert_alpha()
+player_stand_rect = player_stand.get_rect(center = (400, 200))    
 
 #game loop
 
@@ -51,6 +53,7 @@ while True:
                 game_active = True # when left like this Space will restart the game at the last frame where the collision happend, so....
                 snail_rect.left = 800 #we reset the snail to 800 for
                 start_time = int(pygame.time.get_ticks() / 1000) #reset time to enable restart of the game
+                     
     if game_active:
         screen.blit(sky_surface, (0,0))
         screen.blit(ground_surface, (0,300))
@@ -75,7 +78,9 @@ while True:
         if snail_rect.colliderect(player_rect):
             game_active = False
     else:
-        screen.fill('Yellow')
+        screen.fill(94, 129, 162)
+        screen.blit(player_stand, player_stand_rect)
+
 
     #draw all our elements
     #update everything

@@ -2,144 +2,175 @@
 <html>
 
 <head>
-    <title>opleidingen- Koningsoever Uitzenbureau</title>
-    {% include 'bootstrap.html'%}
+  <title>opleidingen- Koningsoever Uitzenbureau</title>
+  {% include 'bootstrap.html'%}
 </head>
 
 <body>
-    {% include 'nav.html' %}
-    <div class="container"> 
-      <h1 class="display-4">In welk vakgebied wil jij aan de slag?</h1>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/static/unsplash-photo-1.jpg');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
-                  <ul class="d-flex list-unstyled mt-auto">
-                    <li class="me-auto">
-                      <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-3">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                      <small>Earth</small>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                      <small>3d</small>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/static/unsplash-photo-2.jpg');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
-                  <ul class="d-flex list-unstyled mt-auto">
-                    <li class="me-auto">
-                      <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-3">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                      <small>Pakistan</small>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                      <small>4d</small>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/static/unsplash-photo-3.jpg');">
-                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
-                  <ul class="d-flex list-unstyled mt-auto">
-                    <li class="me-auto">
-                      <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                    </li>
-                    <li class="d-flex align-items-center me-3">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                      <small>California</small>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                      <small>5d</small>
-                    </li>
-                  </ul>
-                </div>
+  {% include 'nav.html' %}
+  <div class="container px-4">
+    <div class="row mb-4">
+      <div class="col-md-12 align-items-center">
+        <div class="accordion accordion-flush" id="accordionExample">
+          <div class="Voor welke vakgebieden hebben jullie trainingen, cursussen en opleidingen?">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Wat voor opleiding kan ik volgen?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-3">
+                <strong>We hebben voor een hele hoop sectoren opleidingen: </strong>
+                <ul>
+                  <li>Techniek</li>
+                  <li>Zorg</li>
+                  <li>Onderwijs</li>
+                  <li>ICT</li>
+                  <li>Bouw</li>
+                  <li>Logistiek</li>
+                  <li>Transport</li>
+                </ul>
+
               </div>
             </div>
           </div>
-          <div class="accordion" id="accordionExample">
-            <div class="Voor welke vakgebieden hebben jullie trainingen, cursussen en opleidingen?">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>We hebben voor een hele hoop sectoren opleidingen: </strong>
-                  <ul>
-                    <li>Techniek</li>
-                    <li>Zorg</li>
-                    <li>Onderwijs</li>
-                    <li>ICT</li>
-                    <li>Bouw</li>
-                    <li>Logistiek</li>
-                    <li>Transport</li>
-                  </ul>
-                 
-                </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Hebben jullie ook MBO/HBO Opleidingen?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-3">
+                <strong>Jazeker!</strong> Ja, we hebben een aantal bbl opleidingen waarbij je aan het einde van je
+                opleiding
+                een mbo diploma op zak hebt. Dit verschilt per opleiding in welk niveau de mbo opleiding is. Kijk hier
+                welke
+                mbo opleidingen we allemaal hebben.
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Hebben jullie ook MBO/HBO Opleidingen?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Jazeker!</strong> Ja, we hebben een aantal bbl opleidingen waarbij je aan het einde van je opleiding een mbo diploma op zak hebt. Dit verschilt per opleiding in welk niveau de mbo opleiding is. Kijk hier welke mbo opleidingen we allemaal hebben.
-                </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Zijn jullie trainingen en opleidingen gratis?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-3">
+                <strong>Een groot deel wel</strong>, maar niet alle opleidingen zijn gratis. Dit staat per training,
+                opleiding of cursus aangegeven! Wel moet je een randstad-account aanmaken om gebruik te kunnen maken van
+                de
+                trainingen en cursussen. Op deze pagina hebben we al onze online trainingen op een rij gezet.
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Zijn jullie trainingen en opleidingen gratis?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Een groot deel wel</strong>, maar niet alle opleidingen zijn gratis. Dit staat per training, opleiding of cursus aangegeven! Wel moet je een randstad-account aanmaken om gebruik te kunnen maken van de trainingen en cursussen. Op deze pagina hebben we al onze online trainingen op een rij gezet.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Moet ik bij jullie in dienst zijn om een opleiding te volgen?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>De online trainingen</strong> kan je vaak gratis volgens als je jezelf inschrijft bij Koningsoever. We bieden meer dan 400 online trainingen en opleidingen aan op allerlei gebieden. Van ‘Gewoon goed Nederlands’, ‘BHV basiskennis’ tot ‘Adviserend verkopen’.
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Moet ik bij jullie in dienst zijn om een opleiding te volgen?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-3">
+                <strong>De online trainingen</strong> kan je vaak gratis volgens als je jezelf inschrijft bij
+                Koningsoever.
+                We bieden meer dan 400 online trainingen en opleidingen aan op allerlei gebieden. Van ‘Gewoon goed
+                Nederlands’, ‘BHV basiskennis’ tot ‘Adviserend verkopen’.
 
-                  Voor de opleidingen zit dit anders. In de meeste gevallen moet je werkzaam zijn via Randstad om een opleiding te volgen. Deze volg je namelijk vaak tijdens of naast je werk. Dit bespreek je dan met je contactpersoon bij Randstad.
-                </div>
+                Voor de opleidingen zit dit anders. In de meeste gevallen moet je werkzaam zijn via Randstad om een
+                opleiding te volgen. Deze volg je namelijk vaak tijdens of naast je werk. Dit bespreek je dan met je
+                contactpersoon bij Randstad.
               </div>
             </div>
-          </div>    
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-md-12"></div>
+  </div>
 
-    <!--Footer and bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <div class="row mb-4 align-items-center">
+    <div class="col-md-2">
+      <div class="card" style="width: 18rem;">
+        <img src="/static/unsplash-image-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/unsplash-image-7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-2">
+          <div class="card" style="width: 18rem;">
+            <img src="/static/unsplash-image-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card" style="width: 18rem;">
+              <img src="/static/unsplash-image-5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card" style="width: 18rem;">
+                <img src="/static/unsplash-image-2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card" style="width: 18rem;">
+                  <img src="/static/unsplash-image-1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                </div>
+  </div>
+
+  <!--Footer and bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   {%include 'footer.html' %}
 </body>
+
 </html>
